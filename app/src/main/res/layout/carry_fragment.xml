@@ -46,10 +46,16 @@
         android:weightSum="100">
 
         <Button
-            android:layout_weight="100"
+            android:id="@+id/carrySave"
+            android:layout_weight="50"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/carryAddGroupBtn"
-            android:text="Add Group" />
+            android:text="addItem" />
+
+        <Button
+            android:layout_weight="50"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="save" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
