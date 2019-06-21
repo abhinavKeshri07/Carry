@@ -32,8 +32,8 @@ private DrawerLayout drawer;
         NavigationView navigationView = findViewById(R.id.navView);
         navigationView.setNavigationItemSelectedListener(this);
         if(savedInstanceState == null) {
-            navigationView.setCheckedItem(R.id.carryItems);
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new carry()).commit();
+            navigationView.setCheckedItem(R.id.tasks);
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new task()).commit();
         }
     }
     @Override
