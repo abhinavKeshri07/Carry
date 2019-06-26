@@ -25,4 +25,16 @@
                 android:title="Report Bug" />
         </menu>
     </item>
+    <item android:title="settings">
+        <menu>
+            <item
+                android:id="@+id/app_settings"
+                android:icon="@drawable/ic_settings_black_24dp"
+                android:title="App Settings" />
+            <item
+                android:id="@+id/user_settings"
+                android:icon="@drawable/ic_person_black_24dp"
+                android:title="Account Setting"/>
+        </menu>
+    </item>
 </menu>
