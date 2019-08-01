@@ -12,21 +12,21 @@ import java.util.ArrayList;
 import static java.sql.Types.VARCHAR;
 
 public class carryDatabaseHelper extends SQLiteOpenHelper {
-    public static final String DATABASE_NAME = "carry_database.db";
-    public static final String TABLE_NAME = "groups";
-    public static final String Col_1="id";
-    public static final String Col_2 = "group_name";
-    public static final String Col_3 = "item1";
-    public static final String Col_4 = "item2";
-    public static final String Col_5 = "item3";
-    public static final String Col_6 = "item4";
-    public static final String Col_7 = "item5";
-    public static final String Col_8 = "item6";
-    public static final String Col_9 = "item7";
-    public static final String Col_10 = "item8";
-    public static final String Col_11 = "item9";
-    public static final String Col_12 = "item10";
-    public static final String Col_13 = "boolean_integer";
+    private static final String DATABASE_NAME = "carry_database.db";
+    private static final String TABLE_NAME = "groups";
+    private static final String Col_1="id";
+    private static final String Col_2 = "group_name";
+    private static final String Col_3 = "item1";
+    private static final String Col_4 = "item2";
+    private static final String Col_5 = "item3";
+    private static final String Col_6 = "item4";
+    private static final String Col_7 = "item5";
+    private static final String Col_8 = "item6";
+    private static final String Col_9 = "item7";
+    private static final String Col_10 = "item8";
+    private static final String Col_11 = "item9";
+    private static final String Col_12 = "item10";
+    private static final String Col_13 = "boolean_integer";
     private static int version = 3;
     public carryDatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, version);
