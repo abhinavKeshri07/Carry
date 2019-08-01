@@ -12,11 +12,14 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.example.abhinav_11720007.fragments.carry;
+import com.example.abhinav_11720007.fragments.carryOthers.GroupNameDialogue;
 import com.example.abhinav_11720007.fragments.goal;
 import com.example.abhinav_11720007.fragments.task;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, GroupNameDialogue.GroupNameDialogueListener {
 private DrawerLayout drawer;
+private String NewGroupName;
+private carry c;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,7 +54,9 @@ private DrawerLayout drawer;
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         switch (menuItem.getItemId()){
             case R.id.carryItems:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,new carry()).commit();
+                c = new carry();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,c).commit();
+                c.addMainActivity(this);
                 break;
             case R.id.goals:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,new goal()).commit();
@@ -66,4 +71,10 @@ private DrawerLayout drawer;
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+    @Override
+    public void applyText(String s){
+        this.NewGroupName = s;
+        c.setNewGroupName(s);
+    }
+    public void setcarry(carry c){this.c = c;}
 }
